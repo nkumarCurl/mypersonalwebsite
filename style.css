@@ -867,3 +867,37 @@ header p {
         margin-bottom: 10px;
     }
 }
+/* General Mobile Adjustments */
+@media (max-width: 768px) {
+    /* Center align the profile section */
+    header {
+        text-align: center;
+    }
+
+    /* Reduce image size */
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust font size */
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    /* Add more spacing between sections */
+    section {
+        margin-bottom: 20px; /* Increase spacing between sections */
+    }
+
+    /* Increase padding inside download items */
+    .download-box .download-item {
+        padding: 15px; /* Adjust to create balance */
+    }
+}
+
