@@ -1,0 +1,808 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF; /* Primary Background Color */
+    color: #333333; /* Primary Text Color */
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #00796B; /* Teal Blue Accent */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 32px; /* Heading Font Size */
+    font-weight: bold;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* About Section */
+#about {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center; /* Centers the text horizontally */
+}
+
+#about h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#about p {
+    color: #333333;
+    max-width: 700px; /* Optional: limits the width for better readability */
+    margin: 0 auto; /* Centers the content within the section */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Footer */
+footer {
+    background-color: #1A237E; /* Deep Navy Blue */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #2E7D32; /* Emerald Green for Links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #00796B; /* Teal Blue on Hover */
+}
+/* Skills Section Styling */
+#skills {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#skills h2 {
+    color: #2E7D32; /* Emerald Green */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
+    gap: 15px;
+}
+
+.skill {
+    background-color: #F5F5F5;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.skill p {
+    font-size: 1em;
+    color: #333333;
+    margin: 0;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#projects h2 {
+    color: #00796B;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    background-color: #F5F5F5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Publications Section */
+#publications {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#publications h2 {
+    color: #00796B;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#publications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#publications li {
+    margin-bottom: 8px;
+}
+
+#publications a {
+    color: #00796B; /* Teal Blue for Links */
+    text-decoration: none;
+}
+
+#publications a:hover {
+    color: #1A237E; /* Deep Navy Blue on Hover */
+}
+/* Profile Photo */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* About Me Text */
+.about-me-text {
+    margin-top: 10px;
+    color: #333333;
+}
+/* Project Links */
+.project-link {
+    color: #00796B; /* Teal Blue */
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #1A237E; /* Deep Navy Blue */
+}
+/* Project Images Styling */
+.project-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows images to wrap to the next line if needed */
+    justify-content: center; /* Centers images within the section */
+    margin-top: 10px;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 200px; /* Limits the maximum width of each image */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px;
+}
+/* Center the Section Heading and Video */
+.project-card {
+    text-align: center; /* Centers all text within the project card */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    margin: 0 auto;
+}
+
+/* Additional Styling for the Project Title */
+.project-card h3 {
+    color: #1A237E; /* Deep Navy Blue for the heading */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+/* Center Text and Video in Gripper Project */
+.project-card {
+    text-align: center; /* Centers text and video in each project card */
+}
+
+/* Style for Gripper Project Images */
+.project-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 200px; /* Limits the width of each image */
+    height: auto;
+    border-radius: 8px;
+}
+.gripper-images img {
+    width: 100%;
+    max-width: 300px; /* Adjusted max-width for larger images in Gripper Project */
+    height: auto;
+    border-radius: 8px;
+}
+/* Styling for Each Subsection in the Robot Rooms Project */
+.subsection {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0; /* Light gray border for separation */
+    text-align: left;
+}
+
+.subsection h4 {
+    color: #1A237E; /* Deep Navy Blue for subsection titles */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling for Initial Development Images in Robot Rooms Project */
+.initial-development-images img {
+    width: 100%;
+    max-width: 300px; /* Increased size for initial development images */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+/* Styling for Cover Image */
+.cover-image img {
+    width: 100%;
+    max-width: 400px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+/* Publications Section Styling */
+#publications {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#publications h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.publication {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+}
+
+.publication h3 {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.publication p {
+    color: #333333;
+    margin: 5px 0;
+}
+
+.publication p em {
+    font-style: italic;
+    color: #00796B; /* Teal Blue for journal names */
+}
+
+.publication h3 a {
+    color: #1A237E; /* Deep Navy Blue */
+    text-decoration: none;
+}
+
+.publication h3 a:hover {
+    text-decoration: underline;
+}
+/* Contact Section Styling */
+#contact {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-links a {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #1A237E;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.contact-links a:hover {
+    background-color: #1A237E;
+    color: #FFFFFF;
+}
+
+
+/* Career Timeline Styling */
+#timeline {
+    background-color: #FFFFFF;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#timeline h2 {
+    color: #2E7D32; /* Emerald Green */
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Timeline Container Styling */
+.timeline-container-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px; /* Space between items */
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Styling for Each Timeline Item */
+.timeline-item-horizontal {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #F5F5F5; /* Light gray */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 20%; /* Control the width of each item */
+}
+
+/* Hover Effect */
+.timeline-item-horizontal:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item-horizontal h3 {
+    color: #00796B; /* Teal Blue */
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.timeline-item-horizontal p {
+    color: #333333;
+    margin: 0;
+}
+
+/* Arrow Styling */
+.arrow {
+    font-size: 48px; /* Size of the arrow */
+    color: #2E7D32; /* Emerald Green */
+    font-weight: bold;
+    margin: 0 10px; /* Space arrows away from timeline items */
+    align-self: center; /* Center arrows vertically with the timeline items */
+}
+
+/* Press Section Styling */
+#press {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#press h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.press-item {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.press-item h3 {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.press-item p {
+    color: #333333;
+    margin: 10px 0;
+}
+
+.press-item a {
+    color: #00796B; /* Teal Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.press-item a:hover {
+    text-decoration: underline;
+}
+
+/* Downloads Section */
+#downloads {
+    background-color: #FFFFFF;
+    padding: 20px; /* Reduced padding to minimize vertical space */
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Reduced margin for tighter layout */
+}
+
+#downloads h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 26px; /* Slightly increased font size */
+    font-weight: bold;
+    margin-bottom: 10px; /* Less space below heading */
+}
+
+#downloads p {
+    font-size: 15px; /* Slightly larger font */
+    color: #333333;
+    margin-bottom: 15px; /* Reduced margin below description */
+}
+
+.download-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduced gap between boxes */
+    flex-wrap: wrap;
+}
+
+.download-item {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 15px; /* Reduced padding for compact layout */
+    border-radius: 8px;
+    width: 200px; /* Slightly narrower width */
+    height: 160px; /* Slightly shorter height */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.download-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-item h3 {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 18px; /* Increased font size for emphasis */
+    margin-bottom: 5px; /* Compact spacing */
+}
+
+.download-item p {
+    color: #333333;
+    font-size: 13px; /* Increased readability with larger font */
+}
+
+.download-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from item */
+}
+/* General Font Settings */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF; /* Primary Background Color */
+    color: #333333; /* Primary Text Color */
+    line-height: 1.7; /* Slightly increased for readability */
+    font-size: 16px; /* Base font size increased */
+}
+
+/* Header Text */
+header h1 {
+    font-size: 36px; /* Larger heading for hero section */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 28px; /* Increased for section headings */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* General Paragraph Text */
+p {
+    font-size: 18px; /* Larger body text for readability */
+    line-height: 1.8; /* Comfortable line spacing */
+}
+
+/* About Me Section */
+#about {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left; /* Left-aligns text for readability */
+    max-width: 800px; /* Restricts width for better readability */
+    margin: 0 auto; /* Centers the section horizontally */
+}
+
+#about h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 28px; /* Larger font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; /* Center-aligns the heading */
+}
+
+#about p {
+    color: #333333;
+    font-size: 20px; /* Larger font size for readability */
+    line-height: 1.8; /* Increased line spacing */
+    margin-bottom: 15px; /* Spacing between paragraphs */
+}
+
+
+/* Resume & CV Section */
+#downloads h2, #press h2, #timeline h2, #skills h2, #projects h2, #publications h2 {
+    font-size: 26px; /* Uniform size for section headings */
+}
+
+/* Download Items */
+.download-item h3 {
+    font-size: 20px; /* Increased for better visibility */
+}
+
+.download-item p {
+    font-size: 16px; /* Clear and readable font size */
+}
+
+/* Footer */
+footer {
+    font-size: 14px; /* Small but readable footer text */
+}
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7F8FA; /* Light gray background for contrast */
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* Hero Section (Top Banner) */
+header {
+    background: linear-gradient(135deg, #00796B, #1A237E); /* Soft gradient */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Consistent Background for All Sections */
+section {
+    background: linear-gradient(135deg, #F5F5F5, #E0E0E0); /* Light gradient for consistency */
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Section Heading Style */
+section h2 {
+    color: #00796B; /* Consistent with hero color */
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1A237E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+/* General Font Settings */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7F8FA; /* Light gray background for contrast */
+    color: #333333;
+    line-height: 1.8; /* Increased line height for readability */
+    font-size: 18px; /* Increased base font size */
+}
+
+/* Header Section */
+header h1 {
+    font-size: 36px; /* Larger heading for the hero section */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px; /* Increased paragraph font size for readability */
+    margin-top: 10px;
+}
+
+/* Section Headings */
+h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 28px; /* Larger font for section headings */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* General Paragraph Text */
+p {
+    font-size: 18px; /* Larger base text size */
+    line-height: 1.8; /* Consistent line spacing */
+    margin-bottom: 15px;
+}
+
+/* About Me Section */
+#about p {
+    font-size: 20px; /* Slightly larger for About Me section */
+}
+
+/* Resume & CV Section */
+#downloads h2, #press h2, #timeline h2, #skills h2, #projects h2, #publications h2 {
+    font-size: 26px; /* Consistent heading size for all sections */
+}
+
+.download-item h3 {
+    font-size: 20px; /* Larger font size for resume and CV boxes */
+}
+
+.download-item p {
+    font-size: 16px; /* Increased readability */
+}
+
+/* Footer */
+footer {
+    font-size: 16px; /* Increased footer text for visibility */
+}
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00796B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px; /* Increased width */
+    height: 70px; /* Increased height */
+    font-size: 24px; /* Larger font size */
+    cursor: pointer;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+#scrollTopBtn:hover {
+    transform: scale(1.15); /* Slightly more zoom on hover */
+}
+/* Section Styling with Black Divider */
+section {
+    padding: 40px 20px; /* Increased padding for more spacing */
+    margin-bottom: 40px; /* Space between sections */
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Black Divider Line */
+section + section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px; /* Thick black line */
+    background-color: black;
+    margin: 0 auto 20px auto; /* Space below the divider */
+}
+#about {
+    padding: 40px 20px;
+    margin-bottom: 60px; /* Extra space below About Me section */
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+#publications::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+    margin: 0 auto 20px auto; /* Space below the line */
+}
+/* Header Section */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796B; /* Teal Blue Accent */
+    color: white;
+}
+
+/* Profile Image Styling */
+.profile-photo {
+    width: 500px; /* Increase to desired size */
+    height: 500px; /* Keep it square */
+    border-radius: 80%; /* Circular shape */
+    margin-bottom: 15px; /* Space below image */
+}
+
+/* Name and Description Styling */
+header h1 {
+    font-size: 36px; /* Larger font for name */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 20px; /* Slightly larger description */
+    margin-top: 5px;
+}
