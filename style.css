@@ -806,3 +806,64 @@ header p {
     font-size: 20px; /* Slightly larger description */
     margin-top: 5px;
 }
+/* General mobile adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header h1 {
+        font-size: 24px; /* Smaller header font */
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust padding and margin in sections */
+    main {
+        padding: 10px;
+    }
+
+    /* Stack timeline items vertically */
+    .timeline-container-horizontal {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .timeline-item-horizontal {
+        width: 100%; /* Full width */
+        margin-bottom: 20px;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 10px;
+    }
+
+    /* Projects Section */
+    .project-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* About Section text adjustments */
+    #about p {
+        font-size: 16px; /* Slightly larger text for readability */
+        line-height: 1.5;
+    }
+
+    /* Make images in the project sections smaller */
+    .project-images img {
+        max-width: 100%; /* Ensure images don’t overflow */
+        height: auto;
+    }
+
+    /* Contact Section Buttons */
+    .contact-links a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        width: 100%; /* Full width for easier tap targets */
+        margin-bottom: 10px;
+    }
+}
