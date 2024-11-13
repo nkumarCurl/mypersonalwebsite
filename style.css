@@ -904,8 +904,7 @@ header p {
 #about p,
 #downloads p,
 #projects p,
-#publications p,
-#contact p {
+#publications p{
     text-align: justify;
 }
 
