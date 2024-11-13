@@ -900,11 +900,12 @@ header p {
         padding: 15px; /* Adjust to create balance */
     }
 }
-/* Justify text in specific sections only */
+/* Justify text only in specific sections */
 #about p,
 #downloads p,
 #projects p,
-#publications p{
+#publications p,
+#press p {
     text-align: justify;
 }
 
