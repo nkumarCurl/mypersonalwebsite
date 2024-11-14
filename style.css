@@ -377,69 +377,141 @@ footer a:hover {
     color: #FFFFFF;
 }
 
+/* Timeline Section Styling */
 
-/* Career Timeline Styling */
-#timeline {
-    background-color: #FFFFFF;
-    padding: 40px;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-#timeline h2 {
-    color: #2E7D32; /* Emerald Green */
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-
-/* Timeline Container Styling */
-.timeline-container-horizontal {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px; /* Space between items */
-    flex-wrap: nowrap;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* Styling for Each Timeline Item */
-.timeline-item-horizontal {
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #F5F5F5; /* Light gray */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 20%; /* Control the width of each item */
-}
-
-/* Hover Effect */
-.timeline-item-horizontal:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-item-horizontal h3 {
-    color: #00796B; /* Teal Blue */
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.timeline-item-horizontal p {
-    color: #333333;
+/* Expand Timeline Section to Full Width */
+.timeline-section {
+    padding: 40px 0;
+    position: relative;
+    width: 100%; /* Full page width */
     margin: 0;
 }
 
-/* Arrow Styling */
-.arrow {
-    font-size: 48px; /* Size of the arrow */
-    color: #2E7D32; /* Emerald Green */
-    font-weight: bold;
-    margin: 0 10px; /* Space arrows away from timeline items */
-    align-self: center; /* Center arrows vertically with the timeline items */
+/* Centered Inner Timeline Container */
+.timeline-container {
+    max-width: 1000px; /* Maintain a defined width for inner content */
+    margin: 0 auto; /* Center the inner container */
 }
+
+
+/* Center Line Styling */
+.center-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #2E7D32; /* Emerald Green */
+    transform: translateX(-50%);
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Adjust Horizontal Position for Left and Right Boxes */
+.timeline-item.left {
+    align-self: flex-start;
+    margin-right: auto;
+    transform: translateX(-10px); /* Move left box slightly left */
+}
+
+.timeline-item.right {
+    align-self: flex-end;
+    margin-left: auto;
+    transform: translateX(10px); /* Move right box slightly right */
+}
+
+/* Connector Line Styling */
+.connector-line {
+    position: absolute;
+    width: 5px; /* Thickness */
+    height: 60px; /* Length */
+    background-color: #2E7D32;
+    top: 50%; /* Adjust for vertical centering */
+    transform: translateY(-50%);
+}
+
+/* Position and Angle Connector Lines */
+.timeline-item.left .connector-line {
+    right: -30px; /* Increased distance from left box */
+    transform: rotate(-45deg);
+}
+
+.timeline-item.right .connector-line {
+    left: -30px; /* Increased distance from right box */
+    transform: rotate(45deg);
+}
+
+/* Timeline Content */
+.timeline-content {
+    text-align: center;
+}
+
+.timeline-title, .timeline-date {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.timeline-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+.timeline-date {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.timeline-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.timeline-description {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Adjust Spacing for Closer Layout */
+.timeline-container .timeline-item {
+    margin: 10px 0;
+    padding: 15px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 80%;
+    }
+
+    .center-line {
+        left: 50%;
+    }
+}
+
 
 /* Press Section Styling */
 #press {
@@ -908,3 +980,13 @@ header p {
     text-align: justify;
 }
 
+/* Adjusted Box Height */
+.timeline-item {
+    padding: 10px 15px; /* Reduced padding for compactness */
+}
+
+.timeline-description {
+    font-size: 14px; /* Slightly smaller font for the description */
+    line-height: 1.4; /* Tighter line height */
+    margin-top: 8px;
+}
