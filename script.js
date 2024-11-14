@@ -8,19 +8,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll-to-Top Button Visibility and Function
+// Active Link Highlighting in Navbar as You Scroll
 window.onscroll = function() {
-    let scrollTopBtn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollTopBtn.style.display = "block";
-    } else {
-        scrollTopBtn.style.display = "none";
-    }
+    // Active Link Highlighting in Navbar
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar ul li a");
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80; // Adjust for navbar height
+        const sectionHeight = section.clientHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").substring(1) === section.getAttribute("id")) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
 };
 
-function scrollToTop() {
+// Scroll to Top when Home Link (#top) is Clicked
+document.querySelector('a[href="#top"]').addEventListener("click", function (e) {
+    e.preventDefault();
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-}
+});
