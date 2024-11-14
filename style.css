@@ -385,6 +385,7 @@ footer a:hover {
     position: relative;
     width: 100%; /* Full page width */
     margin: 0;
+    
 }
 
 /* Centered Inner Timeline Container */
@@ -582,6 +583,28 @@ footer a:hover {
     margin-bottom: 15px; /* Reduced margin below description */
 }
 
+/* Container for Download Box and Logos */
+.downloads-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between logos and download box */
+}
+
+/* Styling for Logos */
+/* Left Logo Styling */
+.logo-left {
+    width: 300px;
+    margin-right: 150px; /* Increase this value to move it further away */
+}
+
+/* Right Logo Styling */
+.logo-right {
+    width: 300px;
+    margin-left: 150px; /* Increase this value to move it further away */
+}
+
+
 .download-box {
     display: flex;
     justify-content: center;
@@ -623,6 +646,8 @@ footer a:hover {
     text-decoration: none;
     color: inherit; /* Inherit text color from item */
 }
+
+
 /* General Font Settings */
 body {
     font-family: 'Roboto', sans-serif;
@@ -637,6 +662,7 @@ header h1 {
     font-size: 36px; /* Larger heading for hero section */
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Section Headings */
@@ -853,18 +879,19 @@ section + section::before {
 }
 /* Header Section */
 header {
-    text-align: center;
-    padding: 20px;
     background-color: #00796B; /* Teal Blue Accent */
     color: white;
+    text-align: center;
+    padding: 60px 20px 20px; /* Increase top padding to move everything lower */
+    position: relative;
 }
-
 /* Profile Image Styling */
 .profile-photo {
-    width: 500px; /* Increase to desired size */
-    height: 500px; /* Keep it square */
-    border-radius: 80%; /* Circular shape */
-    margin-bottom: 15px; /* Space below image */
+    width: 500px; /* Adjust size as needed */
+    height: 500px;
+    border-radius: 50%; /* Keeps it circular */
+    margin: 20px auto 15px auto; /* Center-aligns with margin auto */
+    display: block; /* Ensures block-level for auto margin centering */
 }
 
 /* Name and Description Styling */
@@ -991,38 +1018,75 @@ header p {
     margin-top: 8px;
 }
 /* Navbar Styling */
+/* Navbar Styling */
 .navbar {
-    background-color: #00796B; /* Adjust to match your theme */
+    background-color: #00796B;
     display: flex;
-    justify-content: center;
-    padding: 5px 0; /* Reduced padding for compactness */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* Minimal padding for reduced height */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Automatically adjust to padding */
 }
 
+
+/* Navbar Links */
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 10px; /* Adjust gap between nav items */
-    margin: 0; /* Remove extra spacing */
+    gap: 10px;
+    margin: 0;
 }
 
 .navbar ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px; /* Reduced font size for compactness */
-    padding: 8px 10px; /* Reduce padding around links */
+    font-size: 20px;
+    padding: 8px 10px;
 }
 
-.navbar {
-    position: fixed;  /* Fixes the navbar to the top */
-    top: 0;
-    width: 100%;
-    background-color: #00796B; /* Adjust to your preferred color */
-    z-index: 1000;  /* Ensures the navbar stays above other elements */
-    padding: 12px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+/* Hide menu toggle icon on larger screens */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
-body {
-    padding-top: 60px; /* Adjust this value to offset the navbar height */
+/* Mobile Navbar Styling */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide nav links initially on mobile */
+        flex-direction: column;
+        gap: 5px;
+        background-color: #00796B;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu icon on mobile */
+    }
+
+    /* Display the nav links when .navbar has the open class */
+    .navbar.open ul {
+        display: flex;
+    }
+}
+
+/* Logo Styling */
+.logo {
+    width: 50px; /* Adjust width as needed */
+    height: auto;
+    margin-right: 5px; /* Space between logo and navbar items */
+    color: white;
+    vertical-align: middle;
 }
