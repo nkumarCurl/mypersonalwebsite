@@ -1090,3 +1090,96 @@ header p {
     color: white;
     vertical-align: middle;
 }
+
+/* Additional Projects Section */
+#smaller-projects {
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#smaller-projects h2 {
+    color: #00796B; /* Teal Blue */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Container for Two Projects with Center Divider */
+.smaller-projects-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Project Details Styling */
+.project-details {
+    width: 45%;
+    text-align: center;
+}
+
+.project-details h3 {
+    color: #1A237E; /* Deep Navy Blue */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Center Divider Line */
+.center-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #00796B; /* Matching blue */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Project Images Styling */
+.project-details .project-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.project-details .project-images img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* Video Container Centering */
+.project-details .video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Specific styling for the targeted images */
+.stretch-image-container {
+    overflow: visible; /* Allows the image to display fully */
+    display: flex;     /* Centers the image within the container */
+    justify-content: center;
+    align-items: center;
+}
+
+.stretch-image {
+    width: 400px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+    object-fit: contain; /* Ensures the image fits within these dimensions without cropping */
+}
+
+
