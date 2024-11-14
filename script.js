@@ -37,3 +37,7 @@ document.querySelector('a[href="#top"]').addEventListener("click", function (e) 
         behavior: "smooth"
     });
 });
+// Mobile Navbar Toggle
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+    document.querySelector(".navbar").classList.toggle("open");
+});
