@@ -990,3 +990,39 @@ header p {
     line-height: 1.4; /* Tighter line height */
     margin-top: 8px;
 }
+/* Navbar Styling */
+.navbar {
+    background-color: #00796B; /* Adjust to match your theme */
+    display: flex;
+    justify-content: center;
+    padding: 5px 0; /* Reduced padding for compactness */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px; /* Adjust gap between nav items */
+    margin: 0; /* Remove extra spacing */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; /* Reduced font size for compactness */
+    padding: 8px 10px; /* Reduce padding around links */
+}
+
+.navbar {
+    position: fixed;  /* Fixes the navbar to the top */
+    top: 0;
+    width: 100%;
+    background-color: #00796B; /* Adjust to your preferred color */
+    z-index: 1000;  /* Ensures the navbar stays above other elements */
+    padding: 12px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+body {
+    padding-top: 60px; /* Adjust this value to offset the navbar height */
+}
